@@ -1,4 +1,10 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LinkedListStack.cs" company="Capgemini">
+//   Copyright © 2018 Company
+// </copyright>
+// <creator Name="Kretika Arora"/>
+// --------------------------------------------------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -49,6 +55,39 @@ namespace DataStructure_LinkedListStackAndQueue
                 Console.WriteLine("Value in the stack : "+temp.data);
                 temp = temp.next;
             }
+        }
+
+        /// <summary>
+        /// Displaying the top element
+        /// UC2
+        /// </summary>
+        public void Peek()
+        {
+            ///Checking if top element is null
+            ///otherwise printing the top element
+            if(this.top==null)
+            {
+                Console.WriteLine("no element present to Peek");
+                return;
+            }
+            Console.WriteLine("The element after Peeking is "+ this.top.data);
+        }
+
+        /// <summary>
+        /// Displaying and Deleting the top element
+        /// UC2
+        /// </summary>
+        public void Pop()
+        {
+            ///Checking if top element is null
+            ///otherwise printing the top element and deleting it also
+            if (this.top == null)
+            {
+                Console.WriteLine("no element present to Pop");
+                return;
+            }
+            Console.WriteLine("The element poped is " + this.top.data);
+            this.top = this.top.next;         
         }
     }
 }
