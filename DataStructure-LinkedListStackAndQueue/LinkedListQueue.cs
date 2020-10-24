@@ -37,7 +37,25 @@ namespace DataStructure_LinkedListStackAndQueue
                 temp.next = newNode;
             }
             Console.WriteLine("Adding the element " + newNode.data);
-        }    
+        }
+
+        /// <summary>
+        /// Removing the first element
+        /// UC4
+        /// </summary>
+        public void Dequeue()
+        {
+            ///checking if queue is empty
+            ///otherwise removing the top element by shifting head to next element 
+            ///breaking the link of first node 
+            if (this.head == null)
+            {
+                Console.WriteLine("No element to remove , queue is empty");
+                return;
+            }
+            Console.WriteLine("The element {0} is removed after Dequeue", this.head.data);
+            this.head = this.head.next;
+        }
 
         /// <summary>
         /// Displaying values in the LinkedListQueue
